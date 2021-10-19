@@ -38,6 +38,11 @@
             this.IntervalTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.EndButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LastExecutionTime = new System.Windows.Forms.Label();
+            this.TargetShopName = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.OpenLinkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CsvFile
@@ -133,11 +138,67 @@
             this.EndButton.UseVisualStyleBackColor = true;
             this.EndButton.Click += new System.EventHandler(this.EndButton_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.label4.Location = new System.Drawing.Point(180, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 21);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "最終実行時刻";
+            // 
+            // LastExecutionTime
+            // 
+            this.LastExecutionTime.AutoSize = true;
+            this.LastExecutionTime.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.LastExecutionTime.Location = new System.Drawing.Point(280, 170);
+            this.LastExecutionTime.Name = "LastExecutionTime";
+            this.LastExecutionTime.Size = new System.Drawing.Size(197, 21);
+            this.LastExecutionTime.TabIndex = 10;
+            this.LastExecutionTime.Text = "2021/01/01 00:00:00.000";
+            // 
+            // TargetShopName
+            // 
+            this.TargetShopName.AutoSize = true;
+            this.TargetShopName.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.TargetShopName.Location = new System.Drawing.Point(280, 135);
+            this.TargetShopName.Name = "TargetShopName";
+            this.TargetShopName.Size = new System.Drawing.Size(80, 21);
+            this.TargetShopName.TabIndex = 12;
+            this.TargetShopName.Text = "お店の名前";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.label6.Location = new System.Drawing.Point(180, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 21);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "現在の監視先";
+            // 
+            // OpenLinkButton
+            // 
+            this.OpenLinkButton.Font = new System.Drawing.Font("メイリオ", 13F);
+            this.OpenLinkButton.Location = new System.Drawing.Point(552, 12);
+            this.OpenLinkButton.Name = "OpenLinkButton";
+            this.OpenLinkButton.Size = new System.Drawing.Size(174, 39);
+            this.OpenLinkButton.TabIndex = 13;
+            this.OpenLinkButton.Text = "URLを開く";
+            this.OpenLinkButton.UseVisualStyleBackColor = true;
+            this.OpenLinkButton.Click += new System.EventHandler(this.OpenLinkButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 551);
+            this.Controls.Add(this.OpenLinkButton);
+            this.Controls.Add(this.TargetShopName);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.LastExecutionTime);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.EndButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.IntervalTextBox);
@@ -148,7 +209,7 @@
             this.Controls.Add(this.LoadFileButton);
             this.Controls.Add(this.FilePath);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "販売状況監視";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +227,11 @@
         private System.Windows.Forms.TextBox IntervalTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button EndButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LastExecutionTime;
+        private System.Windows.Forms.Label TargetShopName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button OpenLinkButton;
     }
 }
 
